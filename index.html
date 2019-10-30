@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <title>Train Schedule</title>
 </head>
+
 <body>
-    
+
+    <div class="container">
+
+        <div class="jumbotron text-center">
+            <h3>Train Scheduler</h3>
+            <p>View your train times</p>
+        </div>
+
+        <div class="card">
+            <h5 class="card-header">Current Train Schedule</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="card">
+            <h5 class="card-header">Add A Train</h5>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="employeeName">Train Name</label>
+                        <input type="name" class="form-control" id="trainName" aria-describedby="emailHelp"
+                        placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destintation">Destination</label>
+                        <input type="role" class="form-control" id="destination" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrainTime">First Train Time</label>
+                        <input type="time" class="form-control" id="startTime" placeholder="(time)">
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyRate">Frequency</label>
+                        <input type="rate" class="form-control" id="frequency" placeholder="(min)">
+                    </div>
+                    <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
